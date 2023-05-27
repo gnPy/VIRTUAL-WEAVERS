@@ -17,8 +17,8 @@ def predict(id):
         except:
             return 0
 
-    train = pd.read_csv("~/Programming/VIRTUAL-WEAVERS/Datasets/user_books.csv")
-    test=pd.read_csv("~/Programming/VIRTUAL-WEAVERS/Datasets/general_books.csv")
+    train = pd.read_csv("Datasets/user_books.csv")
+    test=pd.read_csv("Datasets/general_books.csv")
 
     unwanted_columns = ['title', 'language','isbn','coverImg']
     columns = list(x for x in list(test) if x not in unwanted_columns)
