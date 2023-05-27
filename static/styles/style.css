@@ -103,7 +103,7 @@ section {
     height:100% ; 
     color:  #8b4513 ; 
     -webkit-text-stroke: 2uw yellow ; 
-    border-right : 2px solid  #8b4513 ; 
+    border-right : 2px solid  ; 
     overflow: hidden;
     animation: animate 6s linear infinite;
 }
@@ -132,11 +132,11 @@ section {
 .footer {    
     width: 100%;
     color: #8b4513 ;    
-    height: 100%;   
-    font-size: 64px ; 
+    height: 0;   
+    font-size: 70px ; 
     text-align: center;
     position: relative;
-    background-color: transparent;
+    
   }
 
  
