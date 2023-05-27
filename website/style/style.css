@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+*{
+    font-size: 22px;
+    font-family: 'Rubik', sans-serif;
+    margin:0 ; 
+    top: 0 ; 
+    scroll-behavior: smooth;
+
+    
+}
+
+html{
+    font-size:70% ; 
+    overflow-x: hidden;
+
+}
+
+body{
+    background-image: url('/website/img/bg.jpg');    
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+:root{
+    --bg-color: black ; 
+    --second-bg-color: grey ; 
+    --text-color: #FFE548 ; 
+    --main-color: blue ; 
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    padding: 20px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;     
+    z-index: 100;
+
+
+}
+
+.logo {
+    
+    font-size: 4rem;
+    color : var(--text-color) ; 
+    font-weight: 600;
+
+}
+
+.navbar a {
+    font-size: 2rem ; 
+    color: var(--text-color) ; 
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: 0.3s;
+
+
+}
+
+.navbar a:hover ,.navbar a.active {
+    color:var(--main-color) ; 
+}
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+
+    height:100% ; 
+
+}
+
+.head{
+    font-size: 250px ; 
+    align-items: center;
+    position: relative ; 
+    color :  #8b4513 ; 
+    -webkit-text-stroke: 0.3vw  #966F33;
+    
+}
+<<<<<<< HEAD
+
+.head::before{
+    content: attr(data-text) ; 
+    position: absolute ; 
+    top:0; 
+    left: 0 ; 
+    width :0 ; 
+    height:100% ; 
+    color:  #cd8500 ; 
+    -webkit-text-stroke: 0uw #966F33 ; 
+    border-right : 2px solid  #8b4513 ; 
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0% , 10% , 50%{
+        width:0 ; 
+
+    }
+    50%,50%{
+        width:100% ; 
+    }
+}
+
+.content h3{
+    font-size: 64px;
+    color: #8b4513 ; 
+
+}
+
+.content p{
+    font-size: 50px;
+    
+}
+
+.footer {    
+    width: 100%;
+    color: #8b4513 ;    
+    height: 100%;   
+    font-size: 64px ; 
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+  }
+
+ 
+
+=======
+.footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: bisque;
+  }
+>>>>>>> 738f0f1641465e49dd6c7db61eb3318ebbb44b23
+
