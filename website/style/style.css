@@ -82,7 +82,34 @@ section {
 }
 
 .head{
-    font-size: 74px ; 
+    font-size: 250px ; 
     align-items: center;
+    position: relative ; 
+    color : red ; 
+    -webkit-text-stroke: 0.3vw brown;
+    
+}
 
+.head::before{
+    content: attr(data-text) ; 
+    position: absolute ; 
+    top:0; 
+    left: 0 ; 
+    width :0 ; 
+    height:100% ; 
+    color: yellow ; 
+    -webkit-text-stroke: 0uw brown ; 
+    border-right : 2px solid yellow ; 
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0% , 10% , 100%{
+        width:0 ; 
+
+    }
+    70%,90%{
+        width:100% ; 
+    }
 }
