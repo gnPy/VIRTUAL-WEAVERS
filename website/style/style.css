@@ -17,7 +17,7 @@ html{
 }
 
 body{
-    background-image: url('/img/bg.jpg');    
+    background-image: url('/website/img/bg.jpg');    
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -129,19 +129,16 @@ section {
     
 }
 
-.foot {    
+.footer {    
     width: 100%;
-    color: #8b4513 ; 
-    
+    color: #8b4513 ;    
     height: 100%;   
-
-    font-size: 50px ; 
+    font-size: 64px ; 
     text-align: center;
     position: relative;
-    bottom: 0;
     background-color: transparent;
   }
 
-
+ 
 
 
