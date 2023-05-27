@@ -94,6 +94,7 @@ section {
     
 }
 
+
 .head::before{
     content: attr(data-text) ; 
     position: absolute ; 
@@ -140,5 +141,4 @@ section {
   }
 
  
-
 
