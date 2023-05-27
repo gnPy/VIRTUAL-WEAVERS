@@ -1,5 +1,4 @@
 def predict(id):
-    return True
     import numpy as np
     import pandas as pd
 
@@ -28,7 +27,7 @@ def predict(id):
     for column in columns:
         test[column] = test[column].apply(f)
     test = test.replace(np.nan, 0)
-    test=test.drop('rating', axis=1)
+    test_x=test.drop('rating', axis=1)
 
     train = train[train['UserId'] == id]
     train = train[columns]
@@ -41,10 +40,13 @@ def predict(id):
 
     model = RandomForestRegressor(random_state=0)
     model.fit(train_X, train_y)
-    preds_val = model.predict(test)
-    print(preds_val)
+    preds_val = model.predict(test_x)
+    output=test
+    output["rating"]=preds_val
+    print(output.head())
 
 if __name__ == '__main__':
     # This code block will only run when the file is executed directly, not when imported
     # You can add any test code or additional functionality here
     pass
+predict(31415)
