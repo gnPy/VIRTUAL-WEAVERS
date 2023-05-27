@@ -29,11 +29,16 @@ def login():
 def recom():
     return render_template('recommendation.html', dictionary=dictionary, number=len(dictionary['title']))
 
+@app.route('/dashboard')
+def dash():
+    return render_template('dash.html', dictionary=dictionary, number=len(dictionary['title']))
+
 @app.route('/book/<title>')
 def book(title):
     print(title)
     row_dict=get_row_as_dict(df,title)
     return render_template('book.html',title=title, dictionary=row_dict)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
