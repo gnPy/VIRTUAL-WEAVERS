@@ -55,6 +55,13 @@ def get_details(name_list):
     filtered_df.to_csv("Datasets/temp.csv", index=False)
     return True
 
+def get_row_as_dict(df, name):
+    row = df.loc[df['title'] == name]
+    if len(row) > 0:
+        return row.iloc[0].to_dict()
+    else:
+        return None
+
 if __name__ == '__main__':
     # This code block will only run when the file is executed directly, not when imported
     # You can add any test code or additional functionality here
