@@ -1,10 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from sklearnex import patch_sklearn
 
-# Patch Scikit Learn
-patch_sklearn()
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
