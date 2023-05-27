@@ -136,8 +136,19 @@ section {
     font-size: 70px ; 
     text-align: center;
     position: relative;
-    
+    padding: 450px 0 0; 
+
   }
 
+.footer h3{
+    font-size: 70px;
+    align-items: center;
+    background-color: black;
+}
+.footer p{
+    font-size: 45px;
+    align-items: center;
+    background-color: black;
+}
  
 
