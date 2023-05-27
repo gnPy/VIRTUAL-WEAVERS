@@ -86,11 +86,11 @@ section {
 }
 
 .head{
-    font-size: 200px ; 
+    font-size: 250px ; 
     align-items: center;
     position: relative ; 
-    color :  black ; 
-    -webkit-text-stroke: 0.2vw  #8b4513  ;
+    color :  #8b4513 ; 
+    -webkit-text-stroke: 0.3vw  #966F33;
     
 }
 
@@ -101,8 +101,8 @@ section {
     left: 0 ; 
     width :0 ; 
     height:100% ; 
-    color: #8b4513 ; 
-    -webkit-text-stroke: 0.2uw black ; 
+    color:  #8b4513 ; 
+    -webkit-text-stroke: 2uw yellow ; 
     border-right : 2px solid  ; 
     overflow: hidden;
     animation: animate 6s linear infinite;
@@ -113,7 +113,7 @@ section {
         width:0 ; 
 
     }
-    50%,50%{
+    50%,70%{
         width:100% ; 
     }
 }
