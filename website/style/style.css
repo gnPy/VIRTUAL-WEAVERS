@@ -5,6 +5,7 @@
     font-family: 'Rubik', sans-serif;
     margin:0 ; 
     top: 0 ; 
+    scroll-behavior: smooth;
 
     
 }
@@ -16,7 +17,10 @@ html{
 }
 
 body{
-    background-image: url('img/bg.jpg');
+    background-image: url('/img/bg.jpg');    
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -76,8 +80,8 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url("/img/bg.jpg");
-    background-size: cover;
+
+    height:100% ; 
 
 }
 
@@ -85,7 +89,7 @@ section {
     font-size: 250px ; 
     align-items: center;
     position: relative ; 
-    color :  #966F33 ; 
+    color :  #8b4513 ; 
     -webkit-text-stroke: 0.3vw  #966F33;
     
 }
@@ -97,7 +101,7 @@ section {
     left: 0 ; 
     width :0 ; 
     height:100% ; 
-    color:  yellow ; 
+    color:  #cd8500 ; 
     -webkit-text-stroke: 0uw #966F33 ; 
     border-right : 2px solid  #8b4513 ; 
     overflow: hidden;
@@ -124,4 +128,20 @@ section {
     font-size: 50px;
     
 }
+
+.foot {    
+    width: 100%;
+    color: #8b4513 ; 
+    
+    height: 100%;   
+
+    font-size: 50px ; 
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    background-color: transparent;
+  }
+
+
+
 
