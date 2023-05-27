@@ -1,0 +1,119 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-align: center;
+  }
+  
+  .book-img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .page-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  body {
+    background-image: linear-gradient(to bottom right, #f9f9f9, #eaeaea);
+  }
+  
+  .container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .page-text:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+  }
+  
+  .container {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  
+  h5, p {
+    margin-bottom: 1rem;
+  }
+  
+  h5 {
+    font-weight: bold;
+  }
+  
+  .page-text {
+    line-height: 1.5;
+  }
+  
+  .container {
+    max-width: 95%;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+
+
+
+  .button {
+    height: 50px;
+    width: 200px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #252525;
+    overflow: hidden;
+    border-radius: 30px;
+    color: black;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .btn-txt {
+    z-index: 1;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .button:hover {
+    box-shadow: 1px 1px 200px #252525;
+    color: black;
+    border: none;
+  }
+  
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+
+  }
