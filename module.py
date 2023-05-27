@@ -1,10 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from sklearnex import patch_sklearn
 
-# Patch Scikit Learn
-patch_sklearn()
 
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
@@ -47,10 +44,26 @@ def predict(id):
     output = output.merge(train[['title']], on='title', how='left', indicator=True)
     output = output[output['_merge'] == 'left_only']
     output = output.sort_values('rating', ascending=False)
-    print(list(output.head()['title']))
+    l=list(output.head()['title'])
+    print(l)
+    return l
+
+def get_details(name_list):
+    original_df = pd.read_csv("Datasets/details.csv")
+    filtered_df = original_df[original_df['title'].isin(name_list)]
+    print(filtered_df)
+    filtered_df.to_csv("Datasets/temp.csv", index=False)
+    return True
+
+def get_row_as_dict(df, name):
+    row = df.loc[df['title'] == name]
+    if len(row) > 0:
+        return row.iloc[0].to_dict()
+    else:
+        return None
 
 if __name__ == '__main__':
     # This code block will only run when the file is executed directly, not when imported
     # You can add any test code or additional functionality here
     pass
-predict(31415)
+print(predict(31415))
