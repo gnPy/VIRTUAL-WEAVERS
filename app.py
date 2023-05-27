@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def home():
-    result = predict(1)
+    result = predict(31415)
     data = {'result': result}
     return render_template('index.html', data=data)
 
