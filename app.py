@@ -26,7 +26,7 @@ def login():
 
 @app.route('/recommend')
 def recom():
-    return render_template('recommendation.html')
+    return render_template('recommendation.html', dictionary=dictionary, number=len(dictionary['title']))
 
 if __name__ == '__main__':
     app.run(debug=True)
