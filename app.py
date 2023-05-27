@@ -1,5 +1,5 @@
 from module import predict
-from flask import Flask, render_template
+from flask import Flask, render_template , url_for
 import sys
 import pandas as pd
 sys.path.append('templates')
