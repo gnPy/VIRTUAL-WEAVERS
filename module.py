@@ -42,3 +42,8 @@ def predict(id):
     model.fit(train_X, train_y)
     preds_val = model.predict(test)
     print(preds_val)
+
+if __name__ == '__main__':
+    # This code block will only run when the file is executed directly, not when imported
+    # You can add any test code or additional functionality here
+    pass
