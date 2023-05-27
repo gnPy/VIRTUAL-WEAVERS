@@ -85,8 +85,8 @@ section {
     font-size: 250px ; 
     align-items: center;
     position: relative ; 
-    color : red ; 
-    -webkit-text-stroke: 0.3vw brown;
+    color :  #966F33 ; 
+    -webkit-text-stroke: 0.3vw  #966F33;
     
 }
 
@@ -97,19 +97,31 @@ section {
     left: 0 ; 
     width :0 ; 
     height:100% ; 
-    color: yellow ; 
-    -webkit-text-stroke: 0uw brown ; 
-    border-right : 2px solid yellow ; 
+    color:  yellow ; 
+    -webkit-text-stroke: 0uw #966F33 ; 
+    border-right : 2px solid  #8b4513 ; 
     overflow: hidden;
     animation: animate 6s linear infinite;
 }
 
 @keyframes animate{
-    0% , 10% , 100%{
+    0% , 10% , 50%{
         width:0 ; 
 
     }
-    70%,90%{
+    50%,50%{
         width:100% ; 
     }
 }
+
+.content h3{
+    font-size: 64px;
+    color: #8b4513 ; 
+
+}
+
+.content p{
+    font-size: 50px;
+    
+}
+
