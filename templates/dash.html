@@ -9,9 +9,9 @@
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../static/styles/dash.css">
     <style>
-            .btn-click{
+.btn-click{
   text-decoration: none;
-        }
+}
 
 .btn-click:hover {
   color: white;
@@ -114,12 +114,12 @@
                 {% endfor %}
             </div>
 
-            <!-- ================ Order Details List ================= -->
+            <!-- ================ Popular Books List ================= -->
             <div class="details">
                 <div class="recentOrders">
                     <div class="cardHeader">
-                        <h2>Recommended Books</h2>
-                        <a href="#" class="btn">View All</a>
+                        <h2>Popular Books</h2>
+                        <a href="/popular.html" class="btn">View All</a>
                     </div>
 
                     <table>
@@ -129,32 +129,13 @@
                                 <td>More Details</td>
                             </tr>
                         </thead>
-
                         <tbody>
+                            {% for title in titles%}
                             <tr>
-                                <td>Sherlock Homes - Vol1</td>
-                                <td><span class="status inProgress">View Book</span></td>
+                                <td>{{ title }}</td>
+                                    <td><a href="/book/{{ title }}"><span class="status inProgress">View Book</span></a></td>
                             </tr>
-
-                            <tr>
-                                <td>Sherlock Homes - Vol1</td>
-                                <td><span class="status inProgress">View Book</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Sherlock Homes - Vol1</td>
-                                <td><span class="status inProgress">View Book</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Sherlock Homes - Vol1</td>
-                                <td><span class="status inProgress">View Book</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>Sherlock Homes - Vol1</td>
-                                <td><span class="status inProgress">View Book</span></td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>

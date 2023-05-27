@@ -5,14 +5,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 
+def f(x):
+    try:
+        return float(x)
+    except:
+        return 0
+    
 def predict(id):
-
-    def f(x):
-        try:
-            return float(x)
-        except:
-            return 0
-
     train = pd.read_csv("Datasets/user_books.csv")
     test = pd.read_csv("Datasets/general_books.csv")
 
