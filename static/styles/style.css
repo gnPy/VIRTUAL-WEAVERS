@@ -101,8 +101,8 @@ section {
     left: 0 ; 
     width :0 ; 
     height:100% ; 
-    color: #ffc18c ; 
-    -webkit-text-stroke: 2uw #966F33 ; 
+    color: #8b4513 ; 
+    -webkit-text-stroke: 0.2uw black ; 
     border-right : 2px solid  ; 
     overflow: hidden;
     animation: animate 6s linear infinite;
