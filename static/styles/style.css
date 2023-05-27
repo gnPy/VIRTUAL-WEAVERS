@@ -3,6 +3,10 @@
 *{
     font-size: 22px;
     font-family: 'Rubik', sans-serif;
+    margin:0 ; 
+    top: 0 ; 
+    scroll-behavior: smooth;
+
     
 }
 
@@ -13,7 +17,10 @@ html{
 }
 
 body{
-    background-image: url('img/bg.jpg');
+    background-image: url('/static/img/bg.jpg');    
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -21,8 +28,8 @@ body{
 :root{
     --bg-color: black ; 
     --second-bg-color: grey ; 
-    --text-color: black ; 
-    --main-color: gold ; 
+    --text-color: #FFE548 ; 
+    --main-color: blue ; 
 
 }
 
@@ -35,14 +42,15 @@ body{
     background: transparent;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;     
     z-index: 100;
+
 
 }
 
 .logo {
     
-    font-size: 2.5rem;
+    font-size: 4rem;
     color : var(--text-color) ; 
     font-weight: 600;
 
@@ -54,6 +62,7 @@ body{
     font-weight: 500;
     margin-left: 3.5rem;
     transition: 0.3s;
+
 
 }
 
@@ -71,15 +80,64 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background-size: cover;
-    background-position: center ; 
 
+    height:100% ; 
+
+}
+
+.head{
+    font-size: 250px ; 
+    align-items: center;
+    position: relative ; 
+    color :  #8b4513 ; 
+    -webkit-text-stroke: 0.3vw  #966F33;
     
 }
-.footer {
+
+.head::before{
+    content: attr(data-text) ; 
+    position: absolute ; 
+    top:0; 
+    left: 0 ; 
+    width :0 ; 
+    height:100% ; 
+    color:  #8b4513 ; 
+    -webkit-text-stroke: 2uw yellow ; 
+    border-right : 2px solid  #8b4513 ; 
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0% , 10% , 50%{
+        width:0 ; 
+
+    }
+    50%,70%{
+        width:100% ; 
+    }
+}
+
+.content h3{    
+    font-size: 50px;
+    color: #8b4513 ; 
+
+}
+
+.content p{
+    font-size: 25px;
+    
+}
+
+.footer {    
+    width: 100%;
+    color: #8b4513 ;    
+    height: 100%;   
+    font-size: 64px ; 
     text-align: center;
     position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: bisque;
+    background-color: transparent;
   }
+
+ 
+

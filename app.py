@@ -15,5 +15,9 @@ def home():
     data = {'result': result}
     return render_template('index.html', data=data)
 
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
