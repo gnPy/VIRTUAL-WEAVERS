@@ -1,8 +1,6 @@
 import numpy as np
 import pandas as pd
 
-
-
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
@@ -36,15 +34,16 @@ def predict(id):
     train_y = train_X["rating"]
     train_X = train_X.drop('rating', axis = 1)
 
-    model = RandomForestRegressor(random_state=0)
+    model = RandomForestRegressor()
     model.fit(train_X, train_y)
     preds_val = model.predict(test_x)
+
     output = test
     output["rating"] = preds_val
     output = output.merge(train[['title']], on='title', how='left', indicator=True)
     output = output[output['_merge'] == 'left_only']
     output = output.sort_values('rating', ascending=False)
-    l=list(output.head()['title'])
+    l=list(output.head(8)['title'])
     print(l)
     return l
 
