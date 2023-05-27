@@ -12,27 +12,31 @@ html{
 
 }
 
+body{
+    background-image: url('img/bg.jpg');
+}
+
 
 
 :root{
     --bg-color: black ; 
     --second-bg-color: grey ; 
-    --text-color: navy ; 
+    --text-color: black ; 
     --main-color: gold ; 
 
 }
 
 .header {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width : 100% ;  
-    padding: 2rem 9%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 97%;
+    padding: 20px;
     background: transparent;
-    display: flex ; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100; 
+    z-index: 100;
 
 }
 
@@ -56,3 +60,21 @@ html{
 .navbar a:hover ,.navbar a.active {
     color:var(--main-color) ; 
 }
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background-size: cover;
+    background-position: center ; 
+
+    
+}
+
+
