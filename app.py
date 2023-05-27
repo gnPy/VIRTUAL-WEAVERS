@@ -11,6 +11,7 @@ l = predict(31415)
 get_details(predict(31415))
 
 temp=pd.read_csv("Datasets/temp.csv")
+temp=temp[['title','coverImg','series','rating','description','language']]
 dictionary=dict()
 for column in temp:
     dictionary[column] = list(temp[column])

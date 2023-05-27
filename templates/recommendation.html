@@ -12,10 +12,10 @@
     
   {% for num in range(number) %}
     <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <img class="card-img-top" src="{{ dictionary['coverImg'][num] }}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{ dictionary['title'][num] }}</h5>
-        {% for key in dictionary[] if key!='title' %}
+        {% for key in dictionary if key not in ['title','coverImg'] %}
         <p class="card-text">{{ key }}: {{ dictionary[key][num]}} </p>
         {% endfor %}
       </div>
