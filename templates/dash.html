@@ -140,84 +140,22 @@
                     </table>
                 </div>
 
-                <!-- ================= New Customers ================ -->
+                <!-- ================= Random space ================ -->
                 <div class="recentCustomers">
                     <div class="cardHeader">
                         <h2>Recent View</h2>
                     </div>
-
+                    {% for i in range(7,2,-1) %}
                     <table>
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="static/img/customer02.jpg" alt=""></div>
+                                <div class="imgBx"><img src="{{ dictionary['coverImg'][i] }}" alt=""></div>
                             </td>
                             <td>
-                                <h4>David <br> <span>Italy</span></h4>
+                                <h4>Recent book<br> <span>{{ dictionary['title'][i] }}</span></h4>
                             </td>
                         </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="static/img/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit <br> <span>India</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="static/img/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>David <br> <span>Italy</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="static/img/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit <br> <span>India</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="static/img/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>David <br> <span>Italy</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="static/img/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit <br> <span>India</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="static/img/customer02.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>David <br> <span>Italy</span></h4>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td width="60px">
-                                <div class="imgBx"><img src="static/img/customer01.jpg" alt=""></div>
-                            </td>
-                            <td>
-                                <h4>Amit <br> <span>India</span></h4>
-                            </td>
-                        </tr>
+                    {% endfor %}
                     </table>
                 </div>
             </div>
