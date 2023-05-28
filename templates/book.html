@@ -15,7 +15,7 @@
         <img class="book-img" src="{{ dictionary['coverImg'] }}" alt="">
         <h5 class="card-title">{{ dictionary['title'][num] }}</h5>
         {% for key in dictionary if key not in ['title','coverImg'] %}
-        <p class="page-text" id="{{ key }}">{{ key }}: {{ dictionary[key]}} </p>
+        <p class="page-text" id="{{ key }}">{{ key.title() }}: {{ dictionary[key]}} </p>
         {% endfor %}
         <a href="javascript:history.go(-1)" class="rec">
         <button class="button type1">

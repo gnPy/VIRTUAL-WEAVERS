@@ -41,7 +41,7 @@ for column in temp:
 @app.route('/')
 @app.route('/index')
 def home():
-    return render_template('index.html')
+    return render_template('../index.html')
 
 @app.route('/login')
 def login():
@@ -60,7 +60,7 @@ def book(title):
     df=pd.read_csv("Datasets/details.csv")
     print(title)
     row_dict=get_row_as_dict(df,title)
-    return render_template('book.html',title=title, dictionary=row_dict)
+    return render_template('list.html',title=title, dictionary=row_dict)
 
 
 if __name__ == '__main__':
