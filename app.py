@@ -24,14 +24,7 @@ top_titles=['The Hunger Games',
             'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 
             'Gone with the Wind']
 
-'''
-test=pd.read_csv("Datasets/general_books.csv")
-test=test[['rating','title']]
-test['rating'] = test['rating'].replace(np.nan, 0)
-test['rating'] = test['rating'].apply(f)
-all_titles=test['title'].head(10)
-print(list(all_titles))
-'''
+
 df=pd.read_csv("Datasets/temp.csv")
 temp=df[['title','coverImg','rating','language']]
 dictionary=dict()
