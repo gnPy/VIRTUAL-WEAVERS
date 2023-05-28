@@ -16,7 +16,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ dictionary['title'][num] }}</h5>
         {% for key in dictionary if key not in ['title','coverImg'] %}
-        <p class="card-text">{{ key }}: {{ dictionary[key][num]}} </p>
+        <p class="card-text">{{ key.title() }}: {{ dictionary[key][num]}} </p>
         {% endfor %}
         <a href="/book/{{ dictionary['title'][num] }}" class="btn btn-primary">View Book</a>
       </div>

@@ -102,7 +102,7 @@
                         <div class="numbers">{{num+1}}</div>
                         <div class="cardName">{{ dictionary['title'][num] }}</div>
                         {% for key in dictionary if key not in ['title','coverImg', 'rating'] %}
-                        {{ key }}: {{ dictionary[key][num]}}
+                        {{ key.title() }}: {{ dictionary[key][num]}}
                         {% endfor %}
                     </div>
 
