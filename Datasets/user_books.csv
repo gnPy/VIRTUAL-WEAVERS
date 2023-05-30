@@ -1,12 +1,12 @@
 UserId,title,rating,language,isbn,numRatings,ratingsByStars,likedPercent,coverImg
-31415,The Hunger Games,4,English,9780439023481,6376780,"['3444695', '1921313', '745221', '171994', '93557']",96,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg
-31415,Harry Potter and the Order of the Phoenix,4,English,9780439358071,2507623,"['1593642', '637516', '222366', '39573', '14526']",98,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546910265l/2.jpg
-31415,To Kill a Mockingbird,5,English,9999999999999,4501075,"['2363896', '1333153', '573280', '149952', '80794']",95,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg
-31415,Pride and Prejudice,5,English,9999999999999,2998241,"['1617567', '816659', '373311', '113934', '76770']",94,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320399351l/1885.jpg
-31415,The Book Thief,5,English,9780375831003,1834276,"['1048230', '524674', '186297', '48864', '26211']",96,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1522157426l/19063._SY475_.jpg
-31415,The Chronicles of Narnia,2,English,9999999999999,517740,"['254964', '167572', '74362', '15423', '5419']",96,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1449868701l/11127._SY475_.jpg
-31415,The Hitchhiker's Guide to the Galaxy,5,English,9999999999999,1436325,"['725771', '420864', '199846', '58326', '31518']",94,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1559986152l/386162.jpg
-31415,Wuthering Heights,2,English,9780393978896,1342664,"['483222', '413051', '279702', '107437', '59252']",88,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587655304l/6185._SY475_.jpg
-31415,The Picture of Dorian Gray,4,English,9999999999999,966196,"['382985', '350778', '176188', '41869', '14376']",94,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546103428l/5297.jpg
-31415,Alice's Adventures in Wonderland & Through the Looking-Glass,3,English,9780451527745,458299,"['183179', '155059', '91573', '21360', '7128']",94,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327872220l/24213.jpg
-31415,The Alchemist,1,English,9780062315007,2107732,"['805221', '613564', '414410', '172160', '102377']",87,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1466865542l/18144590._SY475_.jpg
+1,The Hunger Games,4,English,9780439023481,6376780,"['3444695', '1921313', '745221', '171994', '93557']",96,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1586722975l/2767052.jpg
+1,Harry Potter and the Order of the Phoenix,4,English,9780439358071,2507623,"['1593642', '637516', '222366', '39573', '14526']",98,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546910265l/2.jpg
+1,To Kill a Mockingbird,5,English,9999999999999,4501075,"['2363896', '1333153', '573280', '149952', '80794']",95,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1553383690l/2657.jpg
+1,Pride and Prejudice,5,English,9999999999999,2998241,"['1617567', '816659', '373311', '113934', '76770']",94,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320399351l/1885.jpg
+1,The Book Thief,5,English,9780375831003,1834276,"['1048230', '524674', '186297', '48864', '26211']",96,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1522157426l/19063._SY475_.jpg
+1,The Chronicles of Narnia,2,English,9999999999999,517740,"['254964', '167572', '74362', '15423', '5419']",96,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1449868701l/11127._SY475_.jpg
+1,The Hitchhiker's Guide to the Galaxy,5,English,9999999999999,1436325,"['725771', '420864', '199846', '58326', '31518']",94,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1559986152l/386162.jpg
+1,Wuthering Heights,2,English,9780393978896,1342664,"['483222', '413051', '279702', '107437', '59252']",88,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1587655304l/6185._SY475_.jpg
+1,The Picture of Dorian Gray,4,English,9999999999999,966196,"['382985', '350778', '176188', '41869', '14376']",94,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546103428l/5297.jpg
+1,Alice's Adventures in Wonderland & Through the Looking-Glass,3,English,9780451527745,458299,"['183179', '155059', '91573', '21360', '7128']",94,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1327872220l/24213.jpg
+1,The Alchemist,1,English,9780062315007,2107732,"['805221', '613564', '414410', '172160', '102377']",87,https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1466865542l/18144590._SY475_.jpg

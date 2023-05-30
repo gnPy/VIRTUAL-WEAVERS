@@ -70,4 +70,3 @@ if __name__ == '__main__':
     # This code block will only run when the file is executed directly, not when imported
     # You can add any test code or additional functionality here
     pass
-print(predict(31415))

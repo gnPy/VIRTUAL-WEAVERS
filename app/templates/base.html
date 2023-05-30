@@ -65,7 +65,7 @@
                         <span class="title">List</span>
                     </a>
                 </li>
-
+                {% if current_user.is_anonymous %}
                 <li>
                     <a href="{{ url_for('login') }}">
                         <span class="icon">
@@ -74,6 +74,16 @@
                         <span class="title">Sign In</span>
                     </a>
                 </li>
+                {% else %}
+                <li>
+                    <a href="{{ url_for('logout') }}">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+                {% endif %}
             </ul>
         </div>
         <!-- ========================= Main ==================== -->
