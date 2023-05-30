@@ -7,6 +7,7 @@ import numpy as np
 
 sys.path.append('templates')
 
+user={'username':'Pradyumn', 'userID':31415}
 
 app = Flask(__name__)
 
@@ -24,33 +25,21 @@ top_titles=['The Hunger Games',
             'J.R.R. Tolkien 4-Book Boxed Set: The Hobbit and The Lord of the Rings', 
             'Gone with the Wind']
 
-'''
-test=pd.read_csv("Datasets/general_books.csv")
-test=test[['rating','title']]
-test['rating'] = test['rating'].replace(np.nan, 0)
-test['rating'] = test['rating'].apply(f)
-all_titles=test['title'].head(10)
-print(list(all_titles))
-'''
 df=pd.read_csv("Datasets/temp.csv")
 temp=df[['title','coverImg','rating','language']]
 dictionary=dict()
 for column in temp:
     dictionary[column] = list(temp[column])
 
-@app.route('/')
 @app.route('/index')
 def home():
-    return render_template('../index.html')
+    return render_template('base.html')
 
 @app.route('/login')
 def login():
     return render_template("login.html")
 
-@app.route('/recommend')
-def recom():
-    return render_template('recommendation.html', dictionary=dictionary, number=len(dictionary['title']))
-
+@app.route('/')
 @app.route('/dashboard')
 def dash():
     return render_template('dash.html', dictionary=dictionary, number=len(dictionary['title']), titles=top_titles)
@@ -60,7 +49,7 @@ def book(title):
     df=pd.read_csv("Datasets/details.csv")
     print(title)
     row_dict=get_row_as_dict(df,title)
-    return render_template('list.html',title=title, dictionary=row_dict)
+    return render_template('book.html',title=title, dictionary=row_dict)
 
 
 if __name__ == '__main__':
