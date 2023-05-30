@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliomancer</title>
+    {% if title %}
+    <title>{{ title }} - Bibliomancer</title>
+    {% else %}
+    <title></title>
+    {% endif %}
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../static/styles/base.css">
     <style>
@@ -72,7 +76,6 @@
                 </li>
             </ul>
         </div>
-
         <!-- ========================= Main ==================== -->
         <div class="main">
             <div class="topbar">

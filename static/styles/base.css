@@ -13,7 +13,7 @@
   --blue: #2a2185;
   --white: #fff;
   --gray: #f5f5f5;
-  --black1: #222;
+  --black1: #000;
   --black2: #999;
 }
 
@@ -37,27 +37,8 @@ body {
   transition: 0.5s;
   overflow: hidden;
 }
-.navigation.active {
-  width: 80px;
-}
 
-.navigation ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.navigation ul li {
-  position: relative;
-  width: 100%;
-  list-style: none;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-
-.navigation ul li:hover,
-.navigation ul li.hovered {
+.navigation ul li:hover,.navigation ul li.hovered {
   background-color: var(--white);
 }
 

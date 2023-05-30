@@ -48,15 +48,16 @@ def predict(id):
     output = output[output['_merge'] == 'left_only']
     output = output.sort_values('rating', ascending=False)
     l=list(output.head(8)['title'])
-    print(l)
     return l
 
 def get_details(name_list):
     original_df = pd.read_csv("Datasets/details.csv")
     filtered_df = original_df[original_df['title'].isin(name_list)]
-    print(filtered_df)
-    filtered_df.to_csv("Datasets/temp.csv", index=False)
-    return True
+    temp=filtered_df[['title','coverImg','rating','language']]
+    dictionary=dict()
+    for column in temp:
+        dictionary[column] = list(temp[column])
+    return dictionary
 
 def get_row_as_dict(df, name):
     row = df.loc[df['title'] == name]
