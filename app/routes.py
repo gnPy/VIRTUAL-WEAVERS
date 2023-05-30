@@ -1,9 +1,7 @@
-from module import predict, get_details, get_row_as_dict
-from flask import Flask, render_template
+from app.module import predict, get_details, get_row_as_dict
+from app import app
+from flask import render_template
 import pandas as pd
-import numpy as np
-
-app = Flask(__name__)
 
 user={'username':'Pradyumn', 'userID':31415}
 
