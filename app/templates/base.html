@@ -38,15 +38,25 @@
                         <span class="title">Bibliomancer</span>
                     </a>
                 </li>
-
+                {% if current_user.is_anonymous %}
+                <li>
+                    <a href="{{ url_for('index') }}">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                {% else %}
                 <li>
                     <a href="{{ url_for('dashboard') }}">
                         <span class="icon">
-                            <ion-icon name="home-outline"></ion-icon>
+                            <ion-icon name="desktop-outline"></ion-icon>
                         </span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
+                {% endif %}
 
                 <li>
                     <a href="#">
@@ -72,6 +82,14 @@
                             <ion-icon name="log-in-outline"></ion-icon>
                         </span>
                         <span class="title">Sign In</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('register') }}">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                        </span>
+                        <span class="title">Register</span>
                     </a>
                 </li>
                 {% else %}

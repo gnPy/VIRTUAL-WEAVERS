@@ -20,6 +20,9 @@ def predict(id):
     train = pd.read_csv("Datasets/user_books.csv")
     test = pd.read_csv("Datasets/general_books.csv")
 
+    if str(id) not in set(train['UserId']):
+        return None
+
     unwanted_columns = ['title', 'language','isbn','coverImg']
     columns = list(x for x in list(test) if x not in unwanted_columns)
 
