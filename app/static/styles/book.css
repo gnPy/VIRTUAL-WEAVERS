@@ -8,7 +8,7 @@
   /* margin-top: 10px; */
 }
 
-.details .recentOrders {
+.details .Bookdetails {
   position: relative;
   display: grid;
   min-height: 500px;
@@ -32,31 +32,18 @@
   border-collapse: collapse;
   margin-top: 10px;
 }
-.details table thead td {
-  font-weight: 600;
-}
-.details .recentOrders table tr {
+.details .Bookdetails table tr {
   color: --black1;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.details .recentOrders table tr:last-child {
+.details .Bookdetails table tr:last-child {
   border-bottom: none;
 }
-.details .recentOrders table tbody tr:hover {
-  background: --blue;
-  color: --white;
-}
-.details .recentOrders table tr td {
+.details .Bookdetails table tr td {
   padding: 10px;
 }
-.details .recentOrders table tr td:last-child {
+.details .Bookdetails table tr td:last-child {
   text-align: end;
-}
-.details .recentOrders table tr td:nth-child(2) {
-  text-align: end;
-}
-.details .recentOrders table tr td:nth-child(3) {
-  text-align: center;
 }
 .book_info {
   padding: 2px 4px;

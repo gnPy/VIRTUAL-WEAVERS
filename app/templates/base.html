@@ -31,7 +31,7 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="#">
+                    <a>
                         <span class="icon">
                             <ion-icon name="book"></ion-icon>
                         </span>
@@ -40,7 +40,7 @@
                 </li>
 
                 <li>
-                    <a href="/dashboard">
+                    <a href="{{ url_for('dashboard') }}">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -67,11 +67,11 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{ url_for('login') }}">
                         <span class="icon">
-                            <ion-icon name="log-out-outline"></ion-icon>
+                            <ion-icon name="log-in-outline"></ion-icon>
                         </span>
-                        <span class="title">Sign Out</span>
+                        <span class="title">Sign In</span>
                     </a>
                 </li>
             </ul>
@@ -97,19 +97,19 @@
 
             {% block content %}{% endblock %}
 
-            </div>
         </div>
     </div>
-    <script>
-        document.getElementById("searchInput").addEventListener("keyup", function(event) {
-  if (event.key === "Enter") {
-    var searchText = event.target.value;
-    
-    // Generate the URL using Flask's URL generation
-    var url = "/book/" + encodeURIComponent(searchText);
-    
-    // Perform the transfer to the generated URL
-    window.location.href = url;
+</div>
+<script>
+    document.getElementById("searchInput").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        var searchText = event.target.value;
+        
+        // Generate the URL using Flask's URL generation
+        var url = "/book/" + encodeURIComponent(searchText);
+        
+        // Perform the transfer to the generated URL
+        window.location.href = url;
   }
 });
 </script>

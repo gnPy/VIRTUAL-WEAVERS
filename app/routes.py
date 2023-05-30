@@ -1,7 +1,9 @@
+from flask import render_template, flash, redirect, url_for
+import pandas as pd
+
 from app.module import predict, get_details, get_row_as_dict
 from app import app
-from flask import render_template
-import pandas as pd
+from app.forms import LoginForm
 
 user={'username':'Pradyumn', 'userID':31415}
 
@@ -22,13 +24,18 @@ top_titles=['The Hunger Games',
 def home():
     return render_template('base.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template("login.html", title="Login")
+    form = LoginForm()
+    if form.validate_on_submit():
+        flash('Login requested for user {}, remember_me={}'.format(
+            form.username.data, form.remember_me.data))
+        return redirect(url_for('dashboard'))
+    return render_template('login.html', title='Sign In', form=form)
 
 @app.route('/')
 @app.route('/dashboard')
-def dash():
+def dashboard():
     dictionary=get_details(predict(user['userID']))
     return render_template('dash.html', dictionary=dictionary, number=len(dictionary['title']), titles=top_titles, title='Dashboard')
 
