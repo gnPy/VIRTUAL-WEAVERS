@@ -60,7 +60,7 @@
   /* margin-top: 10px; */
 }
 
-.details .recentOrders {
+.details .popularbooks {
   position: relative;
   display: grid;
   min-height: 500px;
@@ -96,27 +96,27 @@
 .details table thead td {
   font-weight: 600;
 }
-.details .recentOrders table tr {
+.details .popularbooks table tr {
   color: var(--black1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.details .recentOrders table tr:last-child {
+.details .popularbooks table tr:last-child {
   border-bottom: none;
 }
-.details .recentOrders table tbody tr:hover {
+.details .popularbooks table tbody tr:hover {
   background: var(--blue);
   color: var(--white);
 }
-.details .recentOrders table tr td {
+.details .popularbooks table tr td {
   padding: 10px;
 }
-.details .recentOrders table tr td:last-child {
+.details .popularbooks table tr td:last-child {
   text-align: end;
 }
-.details .recentOrders table tr td:nth-child(2) {
+.details .popularbooks table tr td:nth-child(2) {
   text-align: end;
 }
-.details .recentOrders table tr td:nth-child(3) {
+.details .popularbooks table tr td:nth-child(3) {
   text-align: center;
 }
 .status.delivered {
@@ -221,7 +221,7 @@
   .details {
     grid-template-columns: 1fr;
   }
-  .recentOrders {
+  .popularbooks {
     overflow-x: auto;
   }
   .status.inProgress {

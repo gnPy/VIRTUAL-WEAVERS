@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="../static/styles/user.css" />
+
+<div>
+    <div class="Userlist">
+        <div class="Userbooks">
+            <div class="cardHeader">
+                <h2>{{ user.username }}'s Books</h2>
+            </div>    
+        <table>
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Rating</td>
+                    <td>More Details</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dictionary in list_of_dict %}
+                <tr>
+                    <td>{{ dictionary["title"] }}</td>
+                    <td>{{ dictionary["rating"] }}</td>
+                    <td><a href="/book/{{ dictionary["title"] }}" class="btn-click"><span class="status inProgress">View Book</span></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -73,3 +73,11 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+@app.route('/user/<username>')
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    df=pd.read_csv("Datasets/user_books.csv")[["UserId", "title", "rating"]]
+    df=df[df["UserId"]==user.id]
+    list_of_dict=[get_row_as_dict(df,title) for title in df["title"]]
+    return render_template('user.html', user=user, list_of_dict=list_of_dict)
