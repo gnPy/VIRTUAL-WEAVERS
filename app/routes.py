@@ -47,7 +47,7 @@ def login():
 def dashboard():
     l=predict(current_user.id) or top_titles
     dictionary=get_details(l)
-    return render_template('dash.html', dictionary=dictionary, number=len(dictionary['title']), titles=top_titles, title='Dashboard')
+    return render_template('dash.html', dictionary=dictionary, titles=top_titles, title='Dashboard')
 
 @app.route('/book/<title>')
 def book(title):

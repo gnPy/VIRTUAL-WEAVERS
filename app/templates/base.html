@@ -124,7 +124,7 @@
                     {% else %}
                     <a href="{{ url_for('user', username=current_user.username) }}">Profile
                     {% endif %}
-                    <img src="static/img/customer01.jpg" alt="Text">
+                    <img src="{{ url_for('static', filename='img/customer01.jpg') }}" alt="Text">
                     </a>
                 </div>
             </div>

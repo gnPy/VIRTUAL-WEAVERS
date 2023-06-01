@@ -1,4 +1,4 @@
 venv/
-Datasets/details.csv
+Datasets/
 app/__pycache__/
 __pycache__/
