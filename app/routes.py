@@ -47,7 +47,8 @@ def login():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    dictionary  = json.load(open("User_lists/user_%s" %(current_user.id), "r")) or top_titles
+    with open("User_lists/user_%s" %(current_user.id), "r") as file:
+        dictionary  = json.load(file) or top_titles
     return render_template('dash.html', dictionary=dictionary, titles=top_titles, title='Dashboard')
 
 @app.route('/book/<title>')
