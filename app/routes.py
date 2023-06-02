@@ -1,9 +1,11 @@
+import json
+
 from flask import render_template, flash, redirect, url_for, request
 import pandas as pd
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
 
-from app.module import predict, get_details, get_row_as_dict
+from app.module import get_row_as_dict
 from app import app, db
 from app.forms import LoginForm,RegistrationForm
 from app.models import User
@@ -45,15 +47,14 @@ def login():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    l=predict(current_user.id) or top_titles
-    dictionary=get_details(l)
+    dictionary  = json.load(open("User_lists/user_%s" %(current_user.id), "r")) or top_titles
     return render_template('dash.html', dictionary=dictionary, titles=top_titles, title='Dashboard')
 
 @app.route('/book/<title>')
 def book(title):
     df=pd.read_csv("Datasets/details.csv", low_memory=False)
     row_dict=get_row_as_dict(df,title)
-    return render_template('book.html',title=title, dictionary=row_dict)
+    return render_template('book.html', dictionary=row_dict)
 
 @app.route('/logout')
 def logout():

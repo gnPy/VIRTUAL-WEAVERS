@@ -1,9 +1,8 @@
 import numpy as np
 import pandas as pd
+import json
 
-from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_absolute_error
 
 from sklearnex import patch_sklearn
 
@@ -45,7 +44,6 @@ def predict(id):
     train_X = train.drop('UserRating', axis=1)
 
     model = RandomForestRegressor()
-    print(train_X)
     model.fit(train_X, train_y)
     preds_val = model.predict(test_X)
 
@@ -57,14 +55,16 @@ def predict(id):
     l=list(output.head(8)['title'])
     return l
 
-def get_details(name_list):
+def save_details(id):
+    name_list = predict(id)
     original_df = pd.read_csv("Datasets/details.csv", low_memory=False)
     filtered_df = original_df[original_df['title'].isin(name_list)]
     temp=filtered_df[['title','coverImg','rating','language']]
     dictionary=dict()
     for column in temp:
         dictionary[column] = list(temp[column])
-    return dictionary
+    with open("User_lists/user_%s" %(id),"w") as file:
+        json.dump(dictionary, file)
 
 def get_row_as_dict(df, name):
     row = df.loc[df['title'] == name]
