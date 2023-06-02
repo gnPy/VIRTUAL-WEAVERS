@@ -12,49 +12,53 @@ patch_sklearn()
 
 def f(x):
     try:
-        return float(x)
+        num = float(x)
     except:
         return 0
+    if num%1==0:
+        return int(x)
+    return float(x)
     
 def predict(id):
-    train = pd.read_csv("Datasets/user_books.csv")
-    test = pd.read_csv("Datasets/general_books.csv")
+    user_books = pd.read_csv("Datasets/user_books.csv")
+    general_books = pd.read_csv("Datasets/details.csv", low_memory=False)
 
-    if str(id) not in set(train['UserId']):
+    if id not in set(user_books['UserId']):
         return None
 
-    unwanted_columns = ['title', 'language','isbn','coverImg']
-    columns = list(x for x in list(test) if x not in unwanted_columns)
+    unwanted_columns = ['author', 'description', 'language','isbn','coverImg', 'title', 'ratingsByStars']
+    columns=list(general_books)
 
-    test_x = test[columns]
-    for column in columns:
-        test_x[column] = test_x[column].apply(f)
-    test_x = test_x.replace(np.nan, 0)
-    test_x=test_x.drop('rating', axis=1)
+    user_books = user_books.loc[user_books['UserId'] == id, :]
+    user_books = user_books[["title", "UserRating"]]
+    books = general_books.loc[general_books['title'].isin(user_books['title'])]
+    books = pd.merge(books, user_books, on="title")
 
-    train_X = train[train['UserId'] == id]
-    train_X = train_X[columns]
-    for column in columns:
-        train_X[column] = train_X[column].apply(f)
-    train_X = train_X.replace(np.nan, 0)
-
-    train_y = train_X["rating"]
-    train_X = train_X.drop('rating', axis = 1)
+    train = books.drop(unwanted_columns, axis=1)
+    test_X = general_books.drop(unwanted_columns, axis=1)
+    
+    for column in list(test_X):
+        test_X[column] = test_X[column].apply(f)
+        train[column] = train[column].apply(f)
+            
+    train_y = train['UserRating']
+    train_X = train.drop('UserRating', axis=1)
 
     model = RandomForestRegressor()
+    print(train_X)
     model.fit(train_X, train_y)
-    preds_val = model.predict(test_x)
+    preds_val = model.predict(test_X)
 
-    output = test
+    output = general_books
     output["rating"] = preds_val
-    output = output.merge(train[['title']], on='title', how='left', indicator=True)
+    output = output.merge(books[['title']], on='title', how='left', indicator=True)
     output = output[output['_merge'] == 'left_only']
     output = output.sort_values('rating', ascending=False)
     l=list(output.head(8)['title'])
     return l
 
 def get_details(name_list):
-    original_df = pd.read_csv("Datasets/details.csv")
+    original_df = pd.read_csv("Datasets/details.csv", low_memory=False)
     filtered_df = original_df[original_df['title'].isin(name_list)]
     temp=filtered_df[['title','coverImg','rating','language']]
     dictionary=dict()

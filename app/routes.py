@@ -51,7 +51,7 @@ def dashboard():
 
 @app.route('/book/<title>')
 def book(title):
-    df=pd.read_csv("Datasets/details.csv")
+    df=pd.read_csv("Datasets/details.csv", low_memory=False)
     row_dict=get_row_as_dict(df,title)
     return render_template('book.html',title=title, dictionary=row_dict)
 
@@ -77,7 +77,7 @@ def register():
 @app.route('/user/<username>')
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
-    df=pd.read_csv("Datasets/user_books.csv")[["UserId", "title", "rating"]]
+    df=pd.read_csv("Datasets/user_books.csv")[["UserId", "title", "UserRating"]]
     df=df[df["UserId"]==user.id]
     list_of_dict=[get_row_as_dict(df,title) for title in df["title"]]
     return render_template('user.html', user=user, list_of_dict=list_of_dict)
