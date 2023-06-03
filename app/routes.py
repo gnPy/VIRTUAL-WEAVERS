@@ -5,7 +5,7 @@ import pandas as pd
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
 
-from app.module import get_row_as_dict
+from app.functions import get_row_as_dict
 from app import app, db
 from app.forms import LoginForm,RegistrationForm
 from app.models import User
@@ -82,4 +82,4 @@ def user(username):
     df=pd.read_csv("Datasets/user_books.csv")[["UserId", "title", "UserRating"]]
     df=df[df["UserId"]==user.id]
     list_of_dict=[get_row_as_dict(df,title) for title in df["title"]]
-    return render_template('user.html', user=user, list_of_dict=list_of_dict)
+    return render_template('user.html', user=user, list_of_dict=list_of_dict, title="%s's Books" % user.username)
